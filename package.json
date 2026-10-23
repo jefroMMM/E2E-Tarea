@@ -9,10 +9,10 @@
     "seed:test": "node --env-file=.env.test scripts/seed.js",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "test:e2e": "start-server-and-test start:test http://127.0.0.1:3000/api/health cy:run",
-    "test:reverse": "start-server-and-test start:test http://127.0.0.1:3000/api/health \"node scripts/reverse-tests.js\"",
+    "test:e2e": "node scripts/run-tests.js",
+    "test:reverse": "node scripts/run-tests.js --reverse",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": { "express": "5.1.0" },
-  "devDependencies": { "cypress": "16.0.0", "typescript": "5.9.3", "start-server-and-test": "2.1.3", "@types/node": "22.18.10" }
+  "devDependencies": { "cypress": "16.0.0", "typescript": "5.9.3", "@types/node": "22.18.10" }
 }

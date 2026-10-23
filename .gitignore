@@ -5,3 +5,4 @@ cypress/videos/
 tmp/
 .env
 *.log
+__pycache__/
