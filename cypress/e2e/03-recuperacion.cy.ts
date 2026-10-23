@@ -25,7 +25,7 @@ describe('Fallo controlado y recuperación', () => {
     cy.get('[data-cy=total]').should('have.text', 'Q 22.00');
     cy.request('/api/orders').its('body').should('have.length', 0);
     cy.get('[data-cy=confirm]').should('be.enabled');
-    cy.screenshot('04-fallo-controlado', { capture: 'viewport' });
+    cy.screenshot('04-fallo-controlado', { capture: 'fullPage' });
     cy.get('[data-cy=confirm]').click();
     cy.wait('@reintento').then(({ request, response }) => {
       expect(request.method).to.eq('POST');
@@ -38,6 +38,6 @@ describe('Fallo controlado y recuperación', () => {
     cy.get('[data-cy=message]').should('contain.text', '¡Pedido confirmado!');
     cy.get('[data-cy=order-id]').should('be.visible');
     cy.request('/api/orders').its('body').should('have.length', 1);
-    cy.screenshot('05-recuperacion-exitosa', { capture: 'viewport' });
+    cy.screenshot('05-recuperacion-exitosa', { capture: 'fullPage' });
   });
 });

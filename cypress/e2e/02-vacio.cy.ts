@@ -16,6 +16,6 @@ describe('Validación del carrito vacío', () => {
       expect(status).to.eq(200);
       expect(body).to.deep.eq([]);
     });
-    cy.screenshot('03-validacion-carrito-vacio', { capture: 'viewport' });
+    cy.screenshot('03-validacion-carrito-vacio', { capture: 'fullPage' });
   });
 });

@@ -11,7 +11,7 @@ describe('Pedido exitoso', () => {
     cy.get('[data-cy=add-3]').click();
     cy.get('[data-cy=quantity-1]').clear().type('2').blur();
     cy.get('[data-cy=total]').should('have.text', 'Q 48.00');
-    cy.screenshot('01-carrito-exitoso', { capture: 'viewport' });
+    cy.screenshot('01-carrito-exitoso', { capture: 'fullPage' });
     cy.get('[data-cy=confirm]').click();
     cy.wait('@crearPedido').then(({ request, response }) => {
       expect(request.method).to.eq('POST');
@@ -37,6 +37,6 @@ describe('Pedido exitoso', () => {
       expect(body.find((p: { id: number }) => p.id === 1).stock).to.eq(18);
       expect(body.find((p: { id: number }) => p.id === 3).stock).to.eq(7);
     });
-    cy.screenshot('02-pedido-confirmado', { capture: 'viewport' });
+    cy.screenshot('02-pedido-confirmado', { capture: 'fullPage' });
   });
 });
