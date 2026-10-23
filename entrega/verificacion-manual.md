@@ -15,3 +15,5 @@ Realizada en el navegador contra http://127.0.0.1:3000:
 La suite Cypress documenta por separado el fallo HTTP simulado y la recuperación.
 
 Se reinició el proceso del servidor y se volvió a consultar la API: el mismo pedido Q 48.00 y sus dos líneas seguían guardados.
+
+Comprobación final con npm start (development): menú inicial correcto y POST /api/test/reset devuelve HTTP 404. La ruta de reinicio está protegida fuera del entorno de pruebas.

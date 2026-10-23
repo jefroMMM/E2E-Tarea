@@ -4,7 +4,12 @@ describe('Validación del carrito vacío', () => {
     cy.intercept('GET', '/api/products').as('menu');
     cy.intercept('POST', '/api/orders').as('crearPedido');
     cy.visit('/');
-    cy.wait('@menu');
+    cy.wait('@menu').then(({ request, response }) => {
+      expect(request.method).to.eq('GET');
+      expect(request.url).to.eq(`${Cypress.config('baseUrl')}/api/products`);
+      expect(response?.statusCode).to.eq(200);
+      expect(response?.body).to.have.length(4);
+    });
   });
   it('muestra la validación sin enviar ni persistir pedidos', () => {
     cy.get('[data-cy=cart]').should('contain.text', 'Tu carrito está vacío');

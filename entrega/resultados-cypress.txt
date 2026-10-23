@@ -1,7 +1,10 @@
+> cafeteria-e2e@1.0.0 test:e2e
+> node scripts/run-tests.js
 
-> cafeteria-e2e@1.0.0 cy:run
-> cypress run
-
+(node:15424) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+Cafetería en http://127.0.0.1:3000 (test)
+API disponible: HTTP 200. Iniciando Cypress.
 
 
 ====================================================================================================
@@ -24,15 +27,15 @@ Read more about supported browsers: https://on.cypress.io/launching-browsers
 
 
 ────────────────────────────────────────────────────────────────────────────────────────────────────
-                                                                                                    
+
   Running:  01-exitoso.cy.ts                                                                (1 of 3)
 
 
   Pedido exitoso
-    √ modifica cantidades y persiste el total y los productos (3467ms)
+    √ modifica cantidades y persiste el total y los productos (3147ms)
 
 
-  1 passing (4s)
+  1 passing (3s)
 
 
   (Results)
@@ -53,9 +56,9 @@ Read more about supported browsers: https://on.cypress.io/launching-browsers
   (Screenshots)
 
   -  C:\Users\masje\OneDrive\Desktop\E2E\cypress\screenshots\01-exitoso.cy.ts\01-carr    (1264x1103)
-     ito-exitoso.png                                                                                
+     ito-exitoso.png
   -  C:\Users\masje\OneDrive\Desktop\E2E\cypress\screenshots\01-exitoso.cy.ts\02-pedi    (1264x1103)
-     do-confirmado.png                                                                              
+     do-confirmado.png
 
 
   (Video)
@@ -64,12 +67,12 @@ Read more about supported browsers: https://on.cypress.io/launching-browsers
 
 
 ────────────────────────────────────────────────────────────────────────────────────────────────────
-                                                                                                    
+
   Running:  02-vacio.cy.ts                                                                  (2 of 3)
 
 
   Validación del carrito vacío
-    √ muestra la validación sin enviar ni persistir pedidos (1407ms)
+    √ muestra la validación sin enviar ni persistir pedidos (1377ms)
 
 
   1 passing (1s)
@@ -93,7 +96,7 @@ Read more about supported browsers: https://on.cypress.io/launching-browsers
   (Screenshots)
 
   -  C:\Users\masje\OneDrive\Desktop\E2E\cypress\screenshots\02-vacio.cy.ts\03-valida    (1264x1103)
-     cion-carrito-vacio.png                                                                         
+     cion-carrito-vacio.png
 
 
   (Video)
@@ -102,15 +105,15 @@ Read more about supported browsers: https://on.cypress.io/launching-browsers
 
 
 ────────────────────────────────────────────────────────────────────────────────────────────────────
-                                                                                                    
+
   Running:  03-recuperacion.cy.ts                                                           (3 of 3)
 
 
   Fallo controlado y recuperación
-    √ conserva el carrito ante HTTP 500 y permite reintentar (2317ms)
+    √ conserva el carrito ante HTTP 500 y permite reintentar (2684ms)
 
 
-  1 passing (2s)
+  1 passing (3s)
 
 
   (Results)
@@ -131,9 +134,9 @@ Read more about supported browsers: https://on.cypress.io/launching-browsers
   (Screenshots)
 
   -  C:\Users\masje\OneDrive\Desktop\E2E\cypress\screenshots\03-recuperacion.cy.ts\04    (1264x1103)
-     -fallo-controlado.png                                                                          
+     -fallo-controlado.png
   -  C:\Users\masje\OneDrive\Desktop\E2E\cypress\screenshots\03-recuperacion.cy.ts\05    (1264x1103)
-     -recuperacion-exitosa.png                                                                      
+     -recuperacion-exitosa.png
 
 
   (Video)
@@ -146,7 +149,7 @@ Read more about supported browsers: https://on.cypress.io/launching-browsers
   (Run Finished)
 
 
-       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+       Spec                                              Tests  Passing  Failing  Pending  Skipped
   ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
   │ √  01-exitoso.cy.ts                         00:03        1        1        -        -        - │
   ├────────────────────────────────────────────────────────────────────────────────────────────────┤
@@ -154,5 +157,6 @@ Read more about supported browsers: https://on.cypress.io/launching-browsers
   ├────────────────────────────────────────────────────────────────────────────────────────────────┤
   │ √  03-recuperacion.cy.ts                    00:02        1        1        -        -        - │
   └────────────────────────────────────────────────────────────────────────────────────────────────┘
-    √  All specs passed!                        00:07        3        3        -        -        -  
+    √  All specs passed!                        00:07        3        3        -        -        -
 
+Servidor de pruebas detenido.
