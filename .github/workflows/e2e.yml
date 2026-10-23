@@ -1,0 +1,30 @@
+name: Cypress E2E
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  e2e:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.23.2'
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run seed:test
+      - name: Cypress headless (espera a la API)
+        run: npm run test:e2e
+      - name: Comprobar independencia en orden inverso
+        run: npm run test:reverse
+      - name: Evidencia de Cypress
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: evidencia-cypress
+          path: |
+            cypress/screenshots/
+            cypress/videos/
+          if-no-files-found: ignore
