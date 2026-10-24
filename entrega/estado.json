@@ -1,5 +1,0 @@
-{
-  "ci_url": "https://github.com/jefroMMM/E2E-Tarea/actions/runs/40037388136",
-  "video_url": "",
-  "resultado": "Cypress local: 3 de 3 pruebas aprobadas, 0 fallos. Orden inverso 03, 02, 01: 3 de 3 aprobadas en procesos separados. TypeScript sin errores. GitHub Actions: ejecución real exitosa, incluida la suite completa, el orden inverso y el artifact de capturas y videos."
-}

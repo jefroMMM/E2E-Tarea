@@ -89,4 +89,4 @@ Para publicar cambios: `git add .`, `git commit -m "Implementa cafetería y prue
 
 Ver `entrega/informe.pdf`, `entrega/guion_video.md` y `entrega/estado.md`. El video debe grabarse y publicarse por el estudiante; su enlace se marca pendiente hasta existir.
 
-ChatGPT y Codex fueron utilizados para apoyar el desarrollo, proponer pruebas, revisar selectores y documentación. Los recorridos usan pasos y aserciones explícitos para que el estudiante pueda leerlos, ejecutarlos y explicarlos.
+

@@ -1,1 +1,0 @@
-Verificación API: OK. Pedido manual Q 48.00 persistido con 2 líneas. Cantidades 0, -1, decimal, texto y >999: HTTP 400. Vacío/duplicados: 400. Sin stock/producto inexistente: 409. Sin pedidos parciales.
